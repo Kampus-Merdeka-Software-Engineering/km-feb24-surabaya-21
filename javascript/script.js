@@ -1,12 +1,13 @@
-// JavaScript to close the navbar when a link is clicked
-document.addEventListener('DOMContentLoaded', (event) => {
-    const navLinks = document.querySelectorAll('#nav-list li a');
-    const checkbox = document.getElementById('check');
-  
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        checkbox.checked = false;
-      });
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('pizza_sales.json')
+     .then(response => response.json())
+     .then(data => {
+        const salesList = document.getElementById('sales-list');
+        data.forEach(sale => {
+          const li = document.createElement('li');
+          li.textContent = `Sale: ${sale.sale} - ${sale.date}`;
+          salesList.appendChild(li);
+        });
+      })
+     .catch(error => console.error(error));
   });
-  

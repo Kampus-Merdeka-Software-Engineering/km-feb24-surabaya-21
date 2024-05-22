@@ -11,12 +11,13 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="javascript/script.js"></script> -->
     <title>Slice & Spice Pizza</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo"><img src="assets/Group 40.png" alt="Pizza"></div>
+            <div class="logo"><img src="assets/img/Group 40.png" alt="Pizza"></div>
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="check-button">
@@ -40,7 +41,7 @@
                     </p>
                 </div>
                 <div class="icon">
-                    <img src="assets/110+_Super_Bowl_Party_Food_Ideas_and_Appetizers-removebg-preview.png" alt="icon">
+                    <img src="assets/img/110+_Super_Bowl_Party_Food_Ideas_and_Appetizers-removebg-preview 1.png" alt="icon">
                 </div>
             </div>
         </section> 
@@ -57,6 +58,36 @@
             <div class="dashboard">
                 <div class="dashboard-header">
                     <h1 >Dashboard Overview</h1>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary-item">
+                    <img src="assets/img/pizza.png" alt="Pizza Icon" class="iconn">
+                    <div class="text-summary">
+                        <h1>Total Revenue</h1>
+                        <p id="total-revenue">$0</p>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <img src="assets/img/pizza.png" alt="Pizza Icon" class="iconn">
+                    <div class="text-summary">
+                        <h1>Total Orders</h1>
+                        <p id="total-order">$0</p>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <img src="assets/img/pizza.png" alt="Pizza Icon" class="iconn">
+                    <div class="text-summary">
+                        <h1>Total Sales</h1>
+                        <p id="total-revenue">$0</p>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <img src="assets/img/pizza.png" alt="Pizza Icon" class="iconn">
+                    <div class="text-summary">
+                        <h1>Average</h1>
+                        <p id="total-avg">$0</p>
+                    </div>
                 </div>
             </div>
             <div class="filter">
@@ -85,6 +116,29 @@
                     <option value="weekly">Weeekly</option>
                     <option value="monthly">Monthly</option>
                 </select>
+            </div>
+            <ul id="sales-list"></ul>
+            <div class="charts">
+                <div class="chart-wrapper">
+                    <h3>PIZZA SOLD BY SIZE</h3>
+                    <canvas id="size"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>TOP 5 SALES PIZZA</h3>
+                    <canvas id="top-five"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>BOTTOM 5 SALES PIZZA</h3>
+                    <canvas id="bottom-five"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>MONTHLY SALES PIZZA</h3>
+                    <canvas id="monthly"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>SALES PIZZA IN HOUR</h3>
+                    <canvas id="hourly"></canvas>
+                </div>
             </div>
         </section>
         <section id="business">
@@ -167,6 +221,5 @@
             <h2>Copyright &copy; 2015, Team 21 Surabaya</h2>
         </footer>
     </div>
-    <script src="javascript/script.js"></script>
 </body>
 </html>
