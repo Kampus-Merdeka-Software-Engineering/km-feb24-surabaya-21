@@ -154,27 +154,6 @@ nav ul li a:hover{
     font-weight:bold;
 }
 
-/* Filter */
-.filter{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 60px;
-    margin-left: 50px;
-}
-.date-range{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    font-size: 18px;
-    margin: 20px;
-    margin-left: -6px;
-    border-radius: 6px;
-    font-weight: 550;
-    border-style: none;
-    color: rgb(134, 125, 125);
-}
-
 /* Dashboard - Score Card */
 .summary{
     display:flex;
@@ -221,6 +200,29 @@ nav ul li a:hover{
     align-items: center;
     justify-items: center;
 }
+
+/* Filter */
+.filter{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+.date-range{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    margin: 20px;
+    margin-left: -6px;
+    border-radius: 6px;
+    font-weight: 550;
+    border-style: none;
+    color: rgb(134, 125, 125);
+}
+
+
 
 /* Dashboard - Charts */
 .charts{
@@ -347,40 +349,32 @@ footer h2{
 /* Responsive media starts here */
 @media only screen and (max-width: 600px) {
     /* Add mobile styles here */
+    /* header and nav */
+    .container{
+        width: 100%;
+        scroll-behavior: smooth;
+    }
     header {
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      height: 15%;
+      height: 17%;
     }
-    .logo img{
-        margin-left: 10px;
-        width: 70%;
+    .logo{
+        width: 17%;
+        margin-left: -30px;
     }
-    /* nav {
-      margin-top: 20px;
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-    nav a{
-        width: 100%;
-        height: 100vh;
-        top: 80px;
-    } */
-    /* nav ul li a{
-        font-size: 16px;
-    } */
     .check-button{
         display: inline-block;
-        margin-right: 100px;
+        margin-right: 30px;
     }
     ul{
-        position: fixed;
-        width: 100%;
-        height: 600px;
+        position:absolute;
+        width: 40%;
+        height: 350px;
         background: #D32F2F;
-        top: 160px;
-        left: -700px;
+        top: 100px;
+        left: 900px;
         text-align: center;
         transition: all .5s;
     }
@@ -391,33 +385,30 @@ footer h2{
         line-height: 40px;
     }
     nav ul li a{
-        font-size: 20px;
+        font-size: 16px;
         margin-right: 50px;
     }
     nav ul li a:hover{
         background: #FAEED6;
-        /* color: #FAEED6; */
     }
     #check:checked ~ ul{
-        left: 0;
+        left:  0;
     }
-    /* .container{
-        justify-content: center;
-    } */
+
+    /* banner */
    .banner {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: 620px;
+      height: 75%;
     }
    .icon {
     display: none;
-      margin-right: 0;
-      margin-top: 0;
     }
    .text {
-      margin: 0 20px;
-      margin-bottom: 90px;
+      margin: 10px 20px;
+      margin-bottom: 70px;
       margin-top: 70px;
     }
     .text h1{
@@ -428,61 +419,82 @@ footer h2{
     }
     .text p{
         font-size: 14px;
-        margin-top: 0px;
+        margin-top: 10px;
         padding: 0 20px;
     }
+
+    /* about */
    .about {
-      width: 80%;
+      width: 90%;
       justify-content: center;
       text-align: center;
-      margin-left: 60px;
-      margin-top: 10px;
+      margin: auto;
+      display: grid;
+      margin-top: 20px;
     }
     .about h2{
         font-size: 26px;
         text-align: center;
     }
-    .dashboard-header{
-        justify-content: center;
-        width: 80%;
+    .about p{
+        font-size: 14px;
     }
-    .dashboard-header h1{
+
+    /* dashboard title */
+    .header-title{
+        justify-content: center;
+        align-items: center;
+        background-color: #D32F2F;
+        border-radius: 20px;
+        color: #FAEED6;
+        width: 95%;
+        height: 35px;
+        padding: 0 auto;
+        margin: 0px auto;
+        margin-top: 55px;
+        margin-bottom: 25px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .header-title h1{
         text-align:center ;
+        font-size: 20px;
     }
+
+    /* score card */
     .summary{
-        justify-content: center;
+        display:flex;
+        align-items: center;
+        justify-content:space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px;
+        border-radius: 20px;
+        width: 80%;
+        margin: 10px auto;
     }
     .summary-item{
-        margin: 20px;
-        width: 150px;
-        height: 120px;
+        display: flex;
+        padding: 0 8px;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #D32F2F;
+        border-radius: 10px;
     }
     .text-summary{
         margin: 0;
         font-size: small;
     }
     .text-summary h1{
-        font-size: 15px;
+        font-size: 12px;
+    }
+    .text-summary p{
+        font-size: 26px;
     }
     .iconn{
         display: none;
     }
-    .business-header{
-        justify-content: center;
-        width: 80%;
-    }
-    .business-header h1{
-        margin-left: 20px;
-    }
-    .team-header{
-        justify-content: center;
-        text-align: center;
-        margin-left: 80px;
-        width: 100%;
-    }
-    .team-header h1{
-        margin-left: 20px;
-    }
+
+    /* filter dashboard */
    .filter {
       flex-direction: row;
       flex-wrap: wrap;
@@ -501,20 +513,27 @@ footer h2{
    .report-container {
       flex-direction: column;
       align-items: center;
-      margin-right: 100px;
-      margin-left: 40px;
     }
+
+    /* team */
    .our-team {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-left: 30px;
     }
    .icon-team {
       width: 40%;
-      margin-left: 30px;
-      margin-top: 20px;
-      margin-left: 50px;
+      height: 350px;
+      margin-top: 30px;
       justify-content: center;
     }
+    .foto{
+        width: 90%;
+        margin: 10px;
+        justify-content: center;
+    }
+
+    /* footer */
+    /* footer{
+    } */
 }
