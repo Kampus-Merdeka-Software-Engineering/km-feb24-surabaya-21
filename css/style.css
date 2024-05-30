@@ -111,22 +111,21 @@ nav ul li a:hover{
 }
 .about-text{
     display: flex;
-    background-color: #D32F2F;
-    color: #FAEED6;
-    padding: 20px 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #3b3b3b;
+    padding: 0px 0px; 
 }
 .about-text p{
     text-align: justify;
-    font-size: 16;
+    font-size: 16px;
     font-weight: 520;
 }
 
 /* Dahsboard */
-.dashboard{
-    display: flex;
-    /* flex-direction: column; */
+.dashboard-h{
+    justify-content: center;
+    align-items: center;
+}
+.business{
     justify-content: center;
     align-items: center;
 }
@@ -150,9 +149,10 @@ nav ul li a:hover{
 .header-title h1{
     justify-content: center;
     text-align: center;    
-    font-size: 15px;    
+    font-size: 24px;    
     font-weight:bold;
 }
+
 
 /* Dashboard - Score Card */
 .summary{
@@ -206,16 +206,15 @@ nav ul li a:hover{
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: 50px;
 }
 .date-range{
     display: flex;
     align-items: center;
     padding: 10px;
-    font-size: 18px;
+    font-size: 16px;
     margin: 20px;
-    margin-left: -6px;
     border-radius: 6px;
     font-weight: 550;
     border-style: none;
@@ -227,38 +226,38 @@ nav ul li a:hover{
 /* Dashboard - Charts */
 .charts{
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
     flex-wrap: wrap;
-    margin-left: 50px;
+    justify-content:space-around;
+    padding: 0 10px;
+    margin: auto 30px;
+}
+.charts h3{
+    width: 85%;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    background-color: #FAEED6;
+    border-radius: 10px;
+    color: #D32F2F;
+    font-size: 16px;
+    padding: auto;
 }
 .chart-wrapper{
     display: inline-block;
     justify-content: center;
-    background-color: #D32F2F;
+    background-color: #ff8e42;
     color: #FAEED6;
-    margin: 20px;
+    margin: 10px;
+    padding: 0 10px 20px;
     border-radius: 10px;
 }
-.chart-wrapper h3{
-    text-align: center;
-}
-.chart-wrapper #size{
-    background-color: #fcc4b3;
-    padding: 20px;
-}
-.chart-wrapper #top-five{
-    background-color: #ffbdab;
-    padding: 20px;
-    width: 550px;
-    height: 650px;
-}
-.chart-wrapper #bottom-five{
-    background-color: #ffbdab;
-    padding: 20px;
-    width: 550px;
-    height: 650px;
-}
+
+/* business reports */
 .business-report{
     display: flex;
     justify-content: center;
@@ -351,7 +350,7 @@ footer{
 }
 footer p{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: bold;
 }
 footer h2{
     font-size: 12px;
@@ -375,7 +374,23 @@ footer h2{
       justify-content: space-between;
       width: 100%;
       height: 17%;
+      /* padding: 11px 6%; */
     }
+/* 
+    .nav-list{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #FAEED6;
+        box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
+        border-top: 2px solid #FAEED6;
+        transition: 0.2s;
+        text-align: lef;
+    } */
+
     .logo{
         width: 17%;
         margin-left: -30px;
@@ -386,10 +401,10 @@ footer h2{
     }
     ul{
         position:absolute;
-        width: 40%;
+        width: 100%;
         height: 350px;
         background: #D32F2F;
-        top: 100px;
+        top: 95px;
         left: 900px;
         text-align: center;
         transition: all .5s;
@@ -464,12 +479,11 @@ footer h2{
         border-radius: 20px;
         color: #FAEED6;
         width: 95%;
-        height: 35px;
+        height: 30px;
         padding: 0 auto;
-        margin: 0px auto;
+        margin: 0px 20px;
         margin-top: 55px;
         margin-bottom: 25px;
-        margin-left: 25px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
     .header-title h1{
@@ -481,17 +495,16 @@ footer h2{
     .summary{
         display:flex;
         align-items: center;
-        justify-content:space-around;
+        justify-content:center;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 30px;
-        border-radius: 20px;
-        width: 80%;
-        margin: 10px auto;
+        padding: 10px;
+        width: 95%;
+        margin: 0px auto;
     }
     .summary-item{
         display: flex;
-        padding: 0 8px;
+        padding: 0 4px;
         flex-direction: row;
         justify-content: center;
         background-color: #D32F2F;
@@ -502,10 +515,10 @@ footer h2{
         font-size: small;
     }
     .text-summary h1{
-        font-size: 12px;
+        font-size: 10px;
     }
     .text-summary p{
-        font-size: 26px;
+        font-size: 24px;
     }
     .iconn{
         display: none;
@@ -520,7 +533,6 @@ footer h2{
    .date-range a {
       margin: 10px 0;
       padding: 10px;
-      font-size: 15px;
     }
     .charts{
       justify-content: center;
