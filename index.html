@@ -11,9 +11,9 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/style.css">
-    <title>Slice & Spice Pizza</title> 
-    <script src="./javascript/scriptNyoba.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Slice & Spice Pizza</title>
 </head>
 <body>
     <div class="container">
@@ -48,13 +48,21 @@
         <div class="about">            
             <h2>PIZZA PLACE SALES</h2>
             <div class="about-text">
-                <p>Pizza Place is a dynamic and innovative company dedicated to providing high-quality pizza products 
-                   and exceptional customer service. Explore our sales dashboard to gain insights into our 2015 performance and discover our strategic business recommendations for the coming year.
+                <p>A year's worth of sales from a fictitious pizza place, 
+                    including the date and time of each order and the pizzas 
+                    served, with additional details on the type, size, quantity, 
+                    price, and ingredients.
+                    <br>
+                    <br>
+                    <b>Preview Data:</b>
                 </p>
+            </div>
+            <div class="raw-data">
+
             </div>
         </div>
         <section id="dashboard">
-            <div class="dashboard">
+            <div class="dashboard-h">
                 <div class="header-title">
                     <h1 >Dashboard Overview</h1>
             </div>
@@ -72,21 +80,21 @@
                     <img src="assets/img/pizza score card icon.png" alt="Pizza Icon" class="iconn">
                     <div class="text-summary">
                         <h1>Total Orders</h1>
-                        <p id="total-orders">0</p>
+                        <p id="total-order">0</p>
                     </div>
                 </div>
                 <div class="summary-item">
                     <img src="assets/img/pizza score card icon.png" alt="Pizza Icon" class="iconn">
                     <div class="text-summary">
                         <h1>Pizza Types</h1>
-                        <p id="total-pizzas">0</p>
+                        <p id="total-types">0</p>
                     </div>
                 </div>
                 <div class="summary-item">
                     <img src="assets/img/pizza score card icon.png" alt="Pizza Icon" class="iconn">
                     <div class="text-summary">
                         <h1>Avg per Month</h1>
-                        <p id="average-sales">$0K</p>
+                        <p id="total-avg">$0K</p>
                     </div>
                 </div>
             </div>
@@ -121,15 +129,7 @@
             <div class="charts">
                 <div class="chart-wrapper">
                     <h3>PIZZA SOLD BY SIZE</h3>
-                    <canvas id="size"></canvas>
-                </div>
-                <div class="chart-wrapper">
-                    <h3>TOP 5 SALES PIZZA</h3>
-                    <canvas id="top-five"></canvas>
-                </div>
-                <div class="chart-wrapper">
-                    <h3>BOTTOM 5 SALES PIZZA</h3>
-                    <canvas id="bottom-five"></canvas>
+                    <canvas id="size" style = width:90%></canvas>
                 </div>
                 <div class="chart-wrapper">
                     <h3>MONTHLY SALES PIZZA</h3>
@@ -139,10 +139,18 @@
                     <h3>SALES PIZZA IN HOUR</h3>
                     <canvas id="hourly"></canvas>
                 </div>
+                <div class="chart-wrapper">
+                    <h3>TOP 5 SALES PIZZA</h3>
+                    <canvas id="top-five"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>BOTTOM 5 SALES PIZZA</h3>
+                    <canvas id="bottom-five"></canvas>
+                </div>
             </div>
         </section>
         <section id="business">
-            <div class="business">
+            <div class="business-">
                 <div class="header-title">
                     <h1>Business Report</h1>
                 </div> 
@@ -173,60 +181,62 @@
                     <h1>Meet Our Team</h1>
                 </div> 
             </div>
+
+            <div class="team-mates">
+                <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Putu Anggi</h3>
+                    <p>Project Leader</p>
+                </div>
+                <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Muhammad Mardhotillah</h3>
+                    <p>PIC Front-End Engineer</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Eka Fitriyanti M</h3>
+                    <p>Front-End Engineer</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Allicia Galuh Paramita</h3>
+                    <p>Front-End Engineer</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Ahmad Alif W</h3>
+                    <p>Front-End Engineer</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Gerani Eka Nuraizah</h3>
+                    <p>Deployment</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Vika Nurqurotul Nabila </h3>
+                    <p>PIC Pitch Deck</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Ryo Aditya Pratama</h3>
+                    <p>Pitch Deck</p>
+                </div>
+                <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Komang Amelia Komala Dewi</h3>
+                    <p>Pitch Deck</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Ikhsan Maulan</h3>
+                    <p>PIC Quality Assurance</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Muhammad Nur Rohim Aziz</h3>
+                    <p>Quality Assurance</p>
+                </div> <div class="icon-team">
+                    <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
+                    <h3>Eve Pauline Damanik</h3>
+                    <p>Quality Assurance</p>
+                </div>
+            </div>
         </section>
-        <div class="team-mates">
-            <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Putu Anggi</h3>
-                <p>Project Leader</p>
-            </div>
-            <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Muhammad Mardhotillah</h3>
-                <p>PIC Front-End Engineer</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Eka Fitriyanti M</h3>
-                <p>Front-End Engineer</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Allicia Galuh Paramita</h3>
-                <p>Front-End Engineer</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Ahmad Alif W</h3>
-                <p>Front-End Engineer</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Gerani Eka Nuraizah</h3>
-                <p>Deployment</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Vika Nurqurotul Nabila </h3>
-                <p>PIC Pitch Deck</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Ryo Aditya Pratama</h3>
-                <p>Pitch Deck</p>
-            </div>
-            <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Komang Amelia Komala Dewi</h3>
-                <p>Pitch Deck</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Ikhsan Maulan</h3>
-                <p>PIC Quality Assurance</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Muhammad Nur Rohim Aziz</h3>
-                <p>Quality Assurance</p>
-            </div> <div class="icon-team">
-                <img src="assets/pepperoni pizza.jpg" alt="" class="foto">
-                <h3>Eve Pauline Damanik</h3>
-                <p>Quality Assurance</p>
-            </div>
-        </div>
+        
         <footer>
             <a href="#home"><img src="assets/mark pizza logo.png" alt="pizza-mark-logo" style= width:3%></a>
             <p>2015 BUSINESS REPORT <br> CREATED BY TEAM 21 - SURABAYA</p>
